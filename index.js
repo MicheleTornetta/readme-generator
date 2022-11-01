@@ -95,12 +95,12 @@ const questions = [
 },
 {
     type: 'input',
-    name: 'questions',
+    name: 'username',
     message: 'Please enter your username.',
 },
 {
     type: 'input',
-    name: 'questions',
+    name: 'email',
     message: 'Please enter your email address.',
 }];
 
@@ -114,10 +114,10 @@ function init() {}
 init();
 
 
-fs.writeFile('readmetest.md', output, 'utf8', ()=> {
 
-});
 
 inquirer.prompt(questions).then((answers) => {
-    console.log(answers.Application Test);
+    fs.writeFile('readmetest.md', generateMarkdown(answers), 'utf8', ()=> {
+
+    });
   });
