@@ -55,7 +55,7 @@ const questions = [
 {
     type: 'input',
     name: 'screenshot',
-    message: 'Please provide a screenshot of your application by typing in the file path.', 
+    message: 'Please provide the full URL to a screenshot of your application by typing in the file path.', 
 },
 {
     type: 'list',
