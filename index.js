@@ -44,11 +44,6 @@ const questions = [
 },
 {
     type: 'input',
-    name: 'tableOfContents',
-    message: 'Please enter your Table of Contents if needed.', 
-},
-{
-    type: 'input',
     name: 'installation',
     message: 'Please provide the installation instructions for your application.', 
 },
