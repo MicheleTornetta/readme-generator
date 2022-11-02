@@ -130,8 +130,12 @@ function generateMarkdown(data) {
   ${renderLicenseSection(data.license)}
 
   ## Table of Contents 
-  [Link to Instructions & Usage](#instructions-usage)
-  
+  [Instructions & Usage](#instructions--usage)
+  [Application Image](#application-image)
+  [License](#license)
+  [Contributor & Sources](#contributor--sources)
+  [Application Test](#application-test)
+  [Questions](#questions)
 
   ## Instructions & Usage 
   ${data.instructionsAndUsage}
@@ -142,10 +146,10 @@ function generateMarkdown(data) {
   ## License 
   ${getLicenseDescription(data.license)}
 
-  ## Contributors/Sources 
+  ## Contributor & Sources 
   ${data.contributorsSourcesTutorials}
 
-  ## Application Test(s) 
+  ## Application Test
   ${data.applicationTest}
 
   ## Questions 
