@@ -123,25 +123,34 @@ function renderLicenseSection(license) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// A function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
 ${renderLicenseSection(data.license)}
 
 ## Table of Contents 
-- [Instructions & Usage](#instructions--usage)
 - [Application Image](#application-image)
+- [Installation Instructions](#installation)
+- [Instructions](#instructions--usage)
+- [Usage Video](#usage-video)
 - [License](#license)
 - [Credits](#credits)
 - [Application Test](#application-test)
 - [Questions](#questions)
 
-## Instructions & Usage 
-${data.instructionsAndUsage}
-
 ## Application Image 
 ![Application Image](${data.screenshot})
+
+## Installation Instructions
+${data.installation}
+
+## Instructions
+${data.instructions}
+
+## Usage Video
+An example of how it works can be viewed here: 
+![Application Gif](${data.usageVideo})
 
 ## License 
 ${getLicenseDescription(data.license)}
@@ -159,7 +168,6 @@ https://github.com/${data.username}
 
 or email me at:
 ${data.email}
-
 `;
 }
 

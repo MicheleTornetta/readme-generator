@@ -1,35 +1,10 @@
-// TODO: Include packages needed for this application
-   // https://www.youtube.com/watch?v=TlB_eWDSMt4
-// TODO: Create an array of questions for user input
 
 //To write to a text file & create markdown
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-
-
-
-let output = "";
-
-//Create a template for the information
-/*const page = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${#Title}</title>
-</head>
-<body>
-  <h1>${music.album}</h1>
-  <h2>${music.title}</h2>
-  <h2>${music.artist}</h2>
-</body>
-</html>`;*/
-
-
-
+//An array of questions for user input
 
 const questions = [
 {
@@ -44,19 +19,25 @@ const questions = [
 },
 {
     type: 'input',
+    name: 'screenshot',
+    message: 'Please provide the full URL to a screenshot of your application by typing in the file path.', 
+},
+{
+    type: 'input',
     name: 'installation',
     message: 'Please provide the installation instructions for your application.', 
 },
 {
     type: 'input',
-    name: 'instructionsAndUsage',
-    message: 'Please provide instructions and examples of how your application is used.', 
+    name: 'instructions',
+    message: 'Please provide instructions explaining how your application is used.', 
 },
 {
     type: 'input',
-    name: 'screenshot',
-    message: 'Please provide the full URL to a screenshot of your application by typing in the file path.', 
+    name: 'usageVideo',
+    message: 'Please provide a video example url showing how your application works.', 
 },
+
 {
     type: 'list',
     name: 'license',
@@ -99,20 +80,9 @@ const questions = [
     message: 'Please enter your email address.',
 }];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
-
-
-
-
+//Prompts the questions & calls the answers
 inquirer.prompt(questions).then((answers) => {
-    fs.writeFile('readmetest.md', generateMarkdown(answers), 'utf8', ()=> {
+    fs.writeFile('readme.md', generateMarkdown(answers), 'utf8', ()=> {
 
     });
   });
